@@ -1,0 +1,73 @@
+const words = [
+	{ en: { id: 1, word: 'apple' }, uz: { id: 1, word: 'olma' } },
+	{ en: { id: 2, word: 'banana' }, uz: { id: 2, word: 'banan' } },
+	{ en: { id: 3, word: 'cat' }, uz: { id: 3, word: 'mushuk' } },
+	{ en: { id: 4, word: 'dog' }, uz: { id: 4, word: 'it' } },
+	{ en: { id: 5, word: 'elephant' }, uz: { id: 5, word: 'fil' } },
+	{ en: { id: 6, word: 'frog' }, uz: { id: 6, word: 'qurbaqa' } },
+	{ en: { id: 7, word: 'giraffe' }, uz: { id: 7, word: 'jirafa' } },
+	{ en: { id: 8, word: 'horse' }, uz: { id: 8, word: 'ot' } },
+	{ en: { id: 9, word: 'iguana' }, uz: { id: 9, word: 'iguana' } },
+	{ en: { id: 10, word: 'jaguar' }, uz: { id: 10, word: 'yaguar' } },
+	{ en: { id: 11, word: 'kangaroo' }, uz: { id: 11, word: 'kenguru' } },
+	{ en: { id: 12, word: 'lion' }, uz: { id: 12, word: 'sher' } },
+	{ en: { id: 13, word: 'monkey' }, uz: { id: 13, word: 'maymun' } },
+	{ en: { id: 14, word: 'nurse' }, uz: { id: 14, word: 'hamshira' } },
+	{ en: { id: 15, word: 'ostrich' }, uz: { id: 15, word: 'tuyaqush' } },
+	{ en: { id: 16, word: 'peacock' }, uz: { id: 16, word: 'tovus' } },
+	{ en: { id: 17, word: 'quail' }, uz: { id: 17, word: 'bedana' } },
+	{ en: { id: 18, word: 'rhinoceros' }, uz: { id: 18, word: 'karkidon' } },
+	{ en: { id: 19, word: 'snake' }, uz: { id: 19, word: 'ilon' } },
+	{ en: { id: 20, word: 'tiger' }, uz: { id: 20, word: "yo'lbars" } },
+	{ en: { id: 21, word: 'umbrella' }, uz: { id: 21, word: 'soyabon' } },
+	{ en: { id: 22, word: 'violin' }, uz: { id: 22, word: 'skripka' } },
+	{ en: { id: 23, word: 'watermelon' }, uz: { id: 23, word: 'tarvuz' } },
+	{ en: { id: 24, word: 'xylophone' }, uz: { id: 24, word: 'ksilofon' } },
+	{ en: { id: 25, word: 'home' }, uz: { id: 25, word: 'uy' } },
+	{ en: { id: 26, word: 'zebra' }, uz: { id: 26, word: 'zebra' } },
+	{ en: { id: 27, word: 'book' }, uz: { id: 27, word: 'kitob' } },
+	{ en: { id: 28, word: 'car' }, uz: { id: 28, word: 'mashina' } },
+	{ en: { id: 29, word: 'door' }, uz: { id: 29, word: 'eshik' } },
+	{ en: { id: 30, word: 'eleven' }, uz: { id: 30, word: "o'n bir" } },
+	{ en: { id: 31, word: 'football' }, uz: { id: 31, word: 'futbol' } },
+	{ en: { id: 32, word: 'guitar' }, uz: { id: 32, word: 'gitara' } },
+	{ en: { id: 33, word: 'hat' }, uz: { id: 33, word: 'shlyapa' } },
+	{ en: { id: 34, word: 'internet' }, uz: { id: 34, word: 'internet' } },
+	{ en: { id: 35, word: 'jacket' }, uz: { id: 35, word: 'kurtka' } },
+	{ en: { id: 36, word: 'hand' }, uz: { id: 36, word: "qo'l" } },
+	{ en: { id: 37, word: 'lemon' }, uz: { id: 37, word: 'limon' } },
+	{ en: { id: 38, word: 'mountain' }, uz: { id: 38, word: "tog'" } },
+	{ en: { id: 39, word: 'sugar' }, uz: { id: 39, word: 'shakar' } },
+	{ en: { id: 40, word: 'orange' }, uz: { id: 40, word: 'apelsin' } },
+	{ en: { id: 41, word: 'pencil' }, uz: { id: 41, word: 'qalam' } },
+	{ en: { id: 42, word: 'salt' }, uz: { id: 42, word: 'tuz' } },
+	{ en: { id: 43, word: 'rose' }, uz: { id: 43, word: 'atirgul' } },
+	{ en: { id: 44, word: 'shoe' }, uz: { id: 44, word: 'poyafzal' } },
+	{ en: { id: 45, word: 'table' }, uz: { id: 45, word: 'stol' } },
+	{ en: { id: 46, word: 'potato' }, uz: { id: 46, word: 'kartoshka' } },
+	{ en: { id: 47, word: 'cabbage' }, uz: { id: 47, word: 'karom' } },
+	{ en: { id: 48, word: 'melon' }, uz: { id: 48, word: 'qovun' } },
+	{ en: { id: 49, word: 'carrot' }, uz: { id: 49, word: 'sabzi' } },
+	{ en: { id: 50, word: 'hair' }, uz: { id: 50, word: 'soch' } },
+	{ en: { id: 51, word: 'ear' }, uz: { id: 51, word: 'quloq' } },
+	{ en: { id: 52, word: 'butterfly' }, uz: { id: 52, word: 'kapalak' } },
+	{ en: { id: 53, word: 'candle' }, uz: { id: 53, word: 'sham' } },
+	{ en: { id: 54, word: 'dolphin' }, uz: { id: 54, word: 'delfin' } },
+	{ en: { id: 55, word: 'leg' }, uz: { id: 55, word: 'oyoq' } },
+	{ en: { id: 56, word: 'eye' }, uz: { id: 56, word: "ko'z" } },
+	{ en: { id: 57, word: 'finger' }, uz: { id: 57, word: 'barmoq' } },
+	{ en: { id: 58, word: 'spoon' }, uz: { id: 58, word: 'qoshiq' } },
+	{ en: { id: 59, word: 'moon' }, uz: { id: 59, word: 'oy' } },
+	{ en: { id: 60, word: 'knife' }, uz: { id: 60, word: 'pichoq' } },
+];
+
+// function shuffleArray(array) {
+// 	for (let i = array.length - 1; i > 0; i--) {
+// 		const j = Math.floor(Math.random() * (i + 1));
+// 		[array[i], array[j]] = [array[j], array[i]];
+// 	}
+// 	return array;
+// }
+
+// const shuffledWords = shuffleArray(words);
+// console.log(shuffledWords);

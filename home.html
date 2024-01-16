@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css//home.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+			rel="stylesheet"
+		/>
+		<title>English Game</title>
+	</head>
+
+	<body style="background-color: #57c5b6">
+		<header class="header">
+			<div class="header__inner container">
+				<a href="#">
+					<img
+						class="logo"
+						src="./images/logo.png"
+						alt="img logo"
+						width="100px"
+						height="100px"
+				/></a>
+				<nav class="navbar">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link" href="#"> About</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#"> Records</a>
+						</li>
+						<li class="nav__item">
+							<img
+								class="user__img"
+								src="./images//rabbit.png"
+								alt="rabbit img"
+								width="50px"
+								height="50px"
+							/>
+							<p id="userName" class="user__name"></p>
+						</li>
+						<li>
+							<button id="logout" class="logout__btn">
+								<img
+									src="./images/logout.png"
+									alt="log out img"
+									width="50px"
+									height="50px"
+								/>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="home">
+			<div class="container">
+				<h1 class="home-title">Choose your level !</h1>
+				<ul class="buttons-wrapper">
+					<li class="icon easy">
+						<button class="easy-btn" value="20">
+							<span class="tooltip">Easy</span>
+							<span
+								><img
+									src="./images/baby-boy.png"
+									alt="baby"
+									width="50"
+									height="50"
+							/></span>
+						</button>
+					</li>
+					<li class="icon medium">
+						<button class="medium-btn" value="15">
+							<span class="tooltip">Medium</span>
+							<span
+								><img
+									src="./images/graduated.png"
+									alt="baby"
+									width="50"
+									height="50"
+							/></span>
+						</button>
+					</li>
+					<li class="icon hard">
+						<button class="hard-btn" value="10">
+							<span class="tooltip">Hard</span>
+							<span
+								><img
+									src="./images/einstein.png"
+									alt="baby"
+									width="50"
+									height="50"
+							/></span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="./js/home.js"></script>
+	</body>
+</html>
